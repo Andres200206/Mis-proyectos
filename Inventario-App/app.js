@@ -56,3 +56,22 @@ function exportToExcel() {
   // Generar el archivo Excel y desencadenar la descarga
   XLSX.writeFile(workbook, "Inventario.xlsx");
 }
+
+// Función para buscar un producto en el inventario
+function searchProduct() {
+  const searchName = document.getElementById('search-name').value.trim().toLowerCase();
+  const searchResult = document.getElementById('search-result');
+
+  if (searchName === '') {
+    searchResult.textContent = 'Por favor, ingrese un nombre para buscar.';
+    return;
+  }
+
+  const product = inventory.find(item => item.name.toLowerCase() === searchName);
+
+  if (product) {
+    searchResult.textContent = `Producto encontrado: ${product.name} - Cantidad: ${product.quantity}`;
+  } else {
+    searchResult.textContent = 'Producto no encontrado en el inventario.';
+  }
+}

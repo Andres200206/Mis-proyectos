@@ -16,6 +16,15 @@
       <input type="number" id="product-quantity" placeholder="Cantidad">
       <button onclick="addProduct()">Agregar Producto</button>
     </div>
+
+    <!-- Campo de búsqueda y botón -->
+    <div class="search-form">
+      <input type="text" id="search-name" placeholder="Buscar Producto">
+      <button onclick="searchProduct()">Buscar</button>
+    </div>
+
+    <div id="search-result"></div> <!-- Div para mostrar resultados de búsqueda -->
+    
     <button onclick="exportToExcel()">Guardar en Excel</button>
     <h2>Inventario Actual</h2>
     <ul id="inventory-list"></ul>
