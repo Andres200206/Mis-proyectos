@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="style.css">
   <link rel="manifest" href="manifest.json">
   <title>Gestión de Inventarios</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 </head>
 <body>
   <div class="container">
@@ -15,6 +16,7 @@
       <input type="number" id="product-quantity" placeholder="Cantidad">
       <button onclick="addProduct()">Agregar Producto</button>
     </div>
+    <button onclick="exportToExcel()">Guardar en Excel</button>
     <h2>Inventario Actual</h2>
     <ul id="inventory-list"></ul>
   </div>
