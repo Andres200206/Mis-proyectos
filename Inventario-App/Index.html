@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+  <title>Gestión de Inventarios</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Gestión de Inventarios</h1>
+    <div class="inventory-form">
+      <input type="text" id="product-name" placeholder="Nombre del Producto">
+      <input type="number" id="product-quantity" placeholder="Cantidad">
+      <button onclick="addProduct()">Agregar Producto</button>
+    </div>
+    <h2>Inventario Actual</h2>
+    <ul id="inventory-list"></ul>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
